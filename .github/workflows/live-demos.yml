@@ -1,0 +1,29 @@
+name: Check portfolio demos
+on:
+  workflow_dispatch:
+  push:
+    paths: ['README.md', '.github/workflows/live-demos.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Verify the public applications
+        shell: bash
+        run: |
+          set -euo pipefail
+          fetch() { curl -fsSL --max-time 70 --retry 5 --retry-delay 5 --retry-all-errors "$@"; }
+          fetch -b '.AspNetCore.Culture=c=en-US|uic=en-US' https://railwaytickets-kycile24.onrender.com/Trips > rail.html
+          grep -q 'Swap stations' rail.html
+          fetch https://warehouse-kycile24.onrender.com/demo/summary | jq -e '.data.totalProducts > 0'
+          fetch https://warehouse-kycile24.onrender.com/demo/low-stock-alerts | jq -e '.data | length > 0'
+          task=https://taskflow-kycile24.onrender.com
+          fetch "$task" | grep 'My board'
+          fetch -c cookies "$task/api/tasks" | jq -e 'length == 0'
+          id=$(curl -fsS -b cookies -H 'Content-Type: application/json' -d '{"title":"Portfolio verification"}' "$task/api/tasks" | jq -er '.id')
+          trap 'curl -fsS -X DELETE -b cookies "$task/api/tasks/$id"' EXIT
+          curl -fsS -X PUT -b cookies -H 'Content-Type: application/json' -d '{"title":"Portfolio verification","isCompleted":true}' "$task/api/tasks/$id"
+          curl -fsS -b cookies "$task/api/tasks/$id" | jq -e '.isCompleted'
+          test "$(curl -so /dev/null -w '%{http_code}' "$task/api/tasks/$id")" = 404
