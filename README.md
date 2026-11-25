@@ -1,6 +1,6 @@
 # Oleksandr Kutsil
 
-**C# / .NET developer · Software engineering student in Kyiv, Ukraine**
+**C# / .NET developer · Kyiv, Ukraine**
 
 I build web APIs and Windows applications. Two projects you can try right away are a railway booking system and a desktop photo editor.
 
