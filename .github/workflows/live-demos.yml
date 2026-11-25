@@ -27,3 +27,8 @@ jobs:
           curl -fsS -X PUT -b cookies -H 'Content-Type: application/json' -d '{"title":"Portfolio verification","isCompleted":true}' "$task/api/tasks/$id"
           curl -fsS -b cookies "$task/api/tasks/$id" | jq -e '.isCompleted'
           test "$(curl -so /dev/null -w '%{http_code}' "$task/api/tasks/$id")" = 404
+      - uses: actions/checkout@v4
+      - name: Test bilingual workspaces in Chrome
+        run: |
+          python -m pip install playwright --quiet
+          python tests/live_workspaces.py

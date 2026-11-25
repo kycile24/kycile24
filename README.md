@@ -2,17 +2,20 @@
 
 **C# / .NET developer · Kyiv, Ukraine**
 
-I build web APIs and Windows applications. Explore three live web applications or download the standalone Windows photo editor.
+I build software for booking trains, managing inventory, organizing daily work and editing photographs.
 
-**[Try railway booking](https://railwaytickets-kycile24.onrender.com/Trips)** · **[Explore warehouse stock](https://warehouse-kycile24.onrender.com)** · **[Open a task board](https://taskflow-kycile24.onrender.com)** · **[Download the Windows photo editor](https://github.com/kycile24/photo-editor/releases/latest/download/PhotoEditor-win-x64.zip)**
+![A pixel snake moving across my GitHub contribution calendar](assets/activity.svg)
 
-### Projects
+## Booking & operations
 
-| Project | What you can explore | Built with |
-| --- | --- | --- |
-| [RailwayTickets](https://github.com/kycile24/RailwayTickets) | Follow a seat from passenger reservation through ticket issuance and cash-shift reconciliation. | ASP.NET Core 10 MVC · SQLite |
-| [Photo Editor](https://github.com/kycile24/photo-editor) | Edit photos locally, compare changes against the original with a split view, and export the result. | C# · .NET 10 · Windows Forms |
-| [Warehouse Management System](https://github.com/kycile24/wms-api) | Track inventory, low-stock alerts and recent movements in a bilingual operations dashboard. | ASP.NET Core 10 · SQL Server · Docker |
-| [TaskFlow](https://github.com/kycile24/TaskFlow.Api) | Manage a personal task board, set deadlines and find overdue work. | ASP.NET Core 10 · EF Core · SQLite |
+<table><tr>
+<td width="50%" valign="top"><a href="https://github.com/kycile24/RailwayTickets"><img src="https://raw.githubusercontent.com/kycile24/RailwayTickets/main/docs/cover.svg" alt="RailwayTickets" width="100%"/></a><p>Reserve a seat, follow the ticket to the cash desk and review a shift report.</p><a href="https://railwaytickets-kycile24.onrender.com/Trips"><strong>Find a trip</strong></a> · <a href="https://github.com/kycile24/RailwayTickets">Read the project notes</a></td>
+<td width="50%" valign="top"><a href="https://github.com/kycile24/wms-api"><img src="https://raw.githubusercontent.com/kycile24/wms-api/master/docs/cover.svg" alt="Warehouse" width="100%"/></a><p>Find stock by bin and warehouse, spot shortages and prepare a purchase plan.</p><a href="https://warehouse-kycile24.onrender.com"><strong>Explore inventory</strong></a> · <a href="https://github.com/kycile24/wms-api">Read the project notes</a></td>
+</tr></table>
 
-<img src="https://raw.githubusercontent.com/kycile24/kycile24/main/assets/activity.svg" width="100%" alt="A pixel snake moving across my GitHub contribution calendar" />
+## Personal workspaces
+
+<table><tr>
+<td width="50%" valign="top"><a href="https://github.com/kycile24/TaskFlow.Api"><img src="https://raw.githubusercontent.com/kycile24/TaskFlow.Api/main/docs/cover.svg" alt="TaskFlow" width="100%"/></a><p>Set deadlines, find overdue tasks and move work between open and completed.</p><a href="https://taskflow-kycile24.onrender.com"><strong>Open your board</strong></a> · <a href="https://github.com/kycile24/TaskFlow.Api">Read the project notes</a></td>
+<td width="50%" valign="top"><a href="https://github.com/kycile24/photo-editor"><img src="https://raw.githubusercontent.com/kycile24/photo-editor/main/docs/cover.svg" alt="Photo Editor" width="100%"/></a><p>Adjust colors and framing, compare the original and export a finished photo on Windows.</p><a href="https://github.com/kycile24/photo-editor/releases/latest/download/PhotoEditor-win-x64.zip"><strong>Download for Windows</strong></a> · <a href="https://github.com/kycile24/photo-editor">Read the project notes</a></td>
+</tr></table>
