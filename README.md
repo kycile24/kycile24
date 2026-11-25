@@ -4,7 +4,7 @@
 
 **C# / .NET developer · Kyiv, Ukraine**
 
-I build software for booking trains, managing inventory, organizing daily work and editing photographs.
+
 
 ![A pixel snake moving across my GitHub contribution calendar](assets/activity.svg)
 
